@@ -44,7 +44,7 @@ static NSArray *	gServicesTypes = nil;
 		gInitialized = YES;
 		
 		gServicesTypes = [[NSArray arrayWithObjects: NSTIFFPboardType, NSRTFDPboardType, nil] retain];
-		[NSApp registerServicesMenuSendTypes: gServicesTypes returnTypes: nil];
+		[NSApp registerServicesMenuSendTypes: gServicesTypes returnTypes: [NSMutableArray array]];
 	}
 }
 
@@ -567,7 +567,7 @@ static NSArray *	gServicesTypes = nil;
 	[myTextAttachment release];
 		
 		// return the flattend data
-	return [myString RTFDFromRange: NSMakeRange(0, [myString length]) documentAttributes: nil];
+    return [myString RTFDFromRange: NSMakeRange(0, [myString length]) documentAttributes: [NSMutableDictionary dictionary]];
 }
 
 	/* Returns a data object containing the current contents of the receiving window */
