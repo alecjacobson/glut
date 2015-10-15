@@ -235,9 +235,9 @@ void APIENTRY glutInit(int *argcp, char **argv)
    
    /* Force the creation of our input device list now. Doing this at a
       latter time screws up mouse down detection... */
-   if (__glutGetNumberOfMouseButtons() < 3) { /* if we have less than a 3 button mouse we should emulate one */
-		__glutEmulateMouseButtons = YES;
-	}
+//   if (__glutGetNumberOfMouseButtons() < 3) { /* if we have less than a 3 button mouse we should emulate one */
+//		__glutEmulateMouseButtons = YES;
+//	}
     
 		/* set default window management options */
 	if (NO == __glutUseExtendedDesktop) {
